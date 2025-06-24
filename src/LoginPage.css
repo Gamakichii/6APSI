@@ -1,85 +1,102 @@
-/* LoginPage.css */
-/* Create a wrapper class for the login page */
 .login-page {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5f5;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* Style the main div container when it's inside login page */
 .login-page > div {
   background: white;
-  padding: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(80, 120, 200, 0.10);
   width: 100%;
-  max-width: 400px;
-  border: 1px solid #e0e0e0;
+  max-width: 350px;
+  border: 1px solid #e3eafc;
   text-align: center;
+  transition: box-shadow 0.2s;
 }
 
-/* Style the h2 login title when it's inside login page */
+.login-page > div:hover {
+  box-shadow: 0 10px 40px rgba(80, 120, 200, 0.16);
+}
+
 .login-page h2 {
   font-size: 2rem;
-  font-weight: 600;
-  color: #333;
+  font-weight: 700;
+  color: #3a3a3a;
   margin-bottom: 2rem;
   margin-top: 0;
+  letter-spacing: 1px;
 }
 
-/* Style all input fields when they're inside login page */
 .login-page input {
   width: 100%;
-  padding: 0.875rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  border: 1.5px solid #d0d7e6;
+  border-radius: 8px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
-  background-color: #fafafa;
+  background-color: #f8fafd;
+  margin-bottom: 1.2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
   box-sizing: border-box;
-  margin-bottom: 1.5rem;
 }
 
 .login-page input:focus {
   outline: none;
-  border-color: #4285f4;
-  background-color: white;
+  border-color: #7baaf7;
+  box-shadow: 0 0 0 2px #e3eafc;
+  background-color: #fff;
 }
 
 .login-page input::placeholder {
-  color: #999;
+  color: #a0a7b4;
+  letter-spacing: 0.5px;
 }
 
-/* Style the login button when it's inside login page */
 .login-page button {
   width: 100%;
-  padding: 0.875rem;
-  background: #4285f4;
+  padding: 0.9rem;
+  background: linear-gradient(90deg, #7baaf7 0%, #4285f4 100%);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.2s, transform 0.1s;
   margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.08);
 }
 
 .login-page button:hover {
-  background: #3367d6;
+  background: linear-gradient(90deg, #4285f4 0%, #7baaf7 100%);
+  transform: translateY(-2px) scale(1.03);
 }
 
 .login-page button:active {
-  background: #2851b8;
+  background: #3367d6;
+  transform: scale(0.98);
 }
 
-/* Remove default br styling when inside login page */
+.login-page button:last-child {
+  background: #e0e0e0;
+  color: #444;
+  margin-top: 1rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.login-page button:last-child:hover {
+  background: #cfd8dc;
+  color: #222;
+}
+
 .login-page br {
   display: none;
 }
@@ -91,6 +108,10 @@
   }
   
   .login-page > div {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .login-page h2 {
+    font-size: 1.5rem;
   }
 }

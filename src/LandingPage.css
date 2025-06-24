@@ -2,7 +2,7 @@
 .landing-page {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background: linear-gradient(120deg, #4285f4 0%, #6a82fb 50%, #a18cd1 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,40 +10,48 @@
 
 .landing-container {
   background: white;
-  padding: 4rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 4rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(80, 120, 200, 0.13);
   width: 100%;
   max-width: 500px;
-  border: 1px solid #e0e0e0;
+  border: 1.5px solid #e0e0e0;
   text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.landing-container:hover {
+  box-shadow: 0 12px 48px rgba(80, 120, 200, 0.18);
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
+  gap: 0.7rem;
+  margin-bottom: 2.2rem;
 }
 
 .logo-icon {
-  width: 32px;
-  height: 32px;
-  background: #4285f4;
-  border-radius: 6px;
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, #4285f4 0%, #6a82fb 100%);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #fff;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
+  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.10);
 }
 
 .logo-text {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #333;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #5f5f8f;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 4px rgba(106, 130, 251, 0.08);
 }
 
 .welcome-section h1 {
@@ -51,28 +59,36 @@
   color: #333;
   margin-bottom: 2rem;
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .logout-button {
-  padding: 0.875rem 2rem;
-  background: #dc3545;
+  padding: 1rem 2.2rem;
+  background: linear-gradient(90deg, #6a82fb 0%, #4285f4 100%);
   color: white;
   border: none;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-weight: 500;
+  transition: background 0.2s, transform 0.1s;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(106, 130, 251, 0.10);
 }
 
 .logout-button:hover {
-  background: #c82333;
+  background: linear-gradient(90deg, #4285f4 0%, #6a82fb 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.logout-button:active {
+  background: #5f5f8f;
+  transform: scale(0.98);
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .landing-container {
-    padding: 3rem 2rem;
+    padding: 3rem 1.2rem;
     margin: 1rem;
   }
   
@@ -83,10 +99,10 @@
 
 @media (max-width: 480px) {
   .landing-container {
-    padding: 2rem 1.5rem;
+    padding: 2rem 0.7rem;
   }
   
   .welcome-section h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
